@@ -1,0 +1,141 @@
+body
+{
+	margin: 1em; padding: 0;
+	background: #111;
+	text-align: center;
+	font: 12pt sans-serif; color: #555;
+}
+
+a
+{
+	color: #999;
+	text-decoration: none;
+}
+
+#Settings
+{
+	margin: 1em 0 2em;
+}
+
+#Content,
+#Generate
+{
+	box-sizing: border-box;
+	margin: 0 0 .5em .5em; padding: .5em .75em;
+	font: 12pt sans-serif; color: #999;
+	border: 0;
+}
+
+#Content
+{
+	background: #222;
+	max-width: 20em;
+	width: 90%;
+}
+
+#Generate
+{
+	background: #999;
+	color: #111;
+}
+
+.Section
+{
+	margin: .75em auto;
+}
+
+.Label
+{
+	display: inline-block;
+	width: 8em;
+	text-align: right;
+}
+
+#Images
+{
+	margin: 0 1em 1em; padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#Images li
+{
+	display: inline;
+}
+
+#Images img
+{
+	margin: 0 0 .25em .25em;
+	width: 64px;
+	cursor: pointer;
+	border: .2em solid #222;
+}
+
+#Result
+{
+	margin: 0 1em 1em;
+}
+
+#License,
+#DropNote,
+#Message
+{
+	margin: 0 1em 1em; padding: 0;
+	text-align: center;
+}
+
+.Error
+{
+	color: #a00;
+}
+
+#qr-canvas
+{
+	display: none;
+}
+
+#Working
+{
+	position: fixed;
+	left: 0; top: 0;
+	right: 0; bottom: 0;
+	background: rgba( 0, 0, 0, .8 );
+}
+
+@-webkit-keyframes working
+{
+	from { -webkit-transform: translateX( -50% ) rotate( 0deg ); }
+	to { -webkit-transform: translateX( -50% ) rotate( 360deg ); }
+}
+
+@-moz-keyframes working
+{
+	from { -moz-transform: translateX( -50% ) rotate( 0deg ); }
+	to { -moz-transform: translateX( -50% ) rotate( 360deg ); }
+}
+
+@-o-keyframes working
+{
+	from { -o-transform: translateX( -50% ) rotate( 0deg ); }
+	to { -o-transform: translateX( -50% ) rotate( 360deg ); }
+}
+
+@keyframes working
+{
+	from { transform: translateX( -50% ) rotate( 0deg ); }
+	to { transform: translateX( -50% ) rotate( 360deg ); }
+}
+
+#Working:after
+{
+	content: '';
+	position: fixed;
+	left: 50%; top: 45%;
+	width: 2em;
+	height: 2em;
+	border: .2em solid #fff;
+	-webkit-animation: working 1s linear infinite;
+	-moz-animation: working 1s linear infinite;
+	-o-animation: working 1s linear infinite;
+	animation: working 1s linear infinite;
+}
