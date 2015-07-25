@@ -28,4 +28,5 @@ QR code detection (for verifying) is done with
 License
 =======
 
-This is public domain.
+qrim.js is public domain.
+Sample images are from my photo stream.
