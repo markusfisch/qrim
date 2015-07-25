@@ -7,10 +7,10 @@
 <link rel="stylesheet" type="text/css" href="css/screen.css"/>
 </head>
 <body>
+<ul id="Images"></ul>
+<p id="DropNote">Choose another background or just drop an image here.</p>
 <canvas id="Result">Sorry, this browser cannot render this content.</canvas>
 <p id="Message">Loading...</p>
-<p id="DropNote">Choose another background or just drop an image here.</p>
-<ul id="Images"></ul>
 <form id="Settings">
 <div class="Section">
 <input
@@ -57,7 +57,9 @@
 <p id="License">QR code generation by
 <a href="https://github.com/soldair/node-qrcode">node-qrcode</a>,
 QR code detection by
-<a href="https://github.com/LazarSoft/jsqrcode">jsqrcode</a>.</p>
+<a href="https://github.com/LazarSoft/jsqrcode">jsqrcode</a>.
+Find the source on
+<a href="https://github.com/markusfisch/qrim">GitHub</a>.</p>
 <div id="Working"></div>
 <!-- QR code generator (https://github.com/soldair/node-qrcode) -->
 <canvas id="qr-canvas"></canvas>
@@ -91,13 +93,11 @@ Math.TAU = Math.TAU || Math.PI*2;
 var qrim = new QRIM(),
 	sampleImages = [
 		"images/beach.jpg",
-		"images/bonville.jpg",
 		"images/coffee.jpg",
 		"images/kay.jpg",
 		"images/motorcycle.jpg",
 		"images/park.jpg",
 		"images/pebbles.jpg",
-		"images/pool.jpg",
 		"images/rallye.jpg",
 		"images/ski.jpg",
 		"images/strawberries.jpg",
