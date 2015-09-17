@@ -258,7 +258,13 @@ function addImageFromFile( file )
 
 	reader.onload = function( event )
 	{
-		addImage( event.target.result );
+		var li = document.createElement( "li" ),
+			image = addImage( event.target.result );
+
+		li.appendChild( image.img );
+		imageList.appendChild( li );
+
+		setResultCanvas( image );
 		postDraw();
 	};
 
