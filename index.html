@@ -55,7 +55,7 @@
 </div>
 </form>
 <p id="License">QR code generation by
-<a href="https://github.com/soldair/node-qrcode">node-qrcode</a>,
+<a href="https://github.com/kazuhikoarase/qrcode-generator">qrcode-generator</a>,
 QR code detection by
 <a href="https://github.com/LazarSoft/jsqrcode">jsqrcode</a>.
 Find the source on
@@ -63,7 +63,7 @@ Find the source on
 <div id="Working"></div>
 <!-- QR code generator (https://github.com/soldair/node-qrcode) -->
 <canvas id="qr-canvas"></canvas>
-<script src="lib/node-qrcode/lib/qrcode.js"></script>
+<script src="lib/qrcodegenerator/qrcode.js"></script>
 <!-- QR code reader (https://github.com/LazarSoft/jsqrcode) -->
 <script src="lib/jsqrcode/src/grid.js"></script>
 <script src="lib/jsqrcode/src/version.js"></script>
@@ -187,9 +187,8 @@ function drawWhenComplete()
 	qrim.eyeAlpha = eyeAlphaRange.value/100;
 	qrim.matrixAlpha = matrixAlphaRange.value/100;
 
-	// type number 6 and error level H is 64 characters maximum
-	var text = contentInput.value.substr( 0, 64 ),
-		qr = new QRCode( 6, QRErrorCorrectLevel.H );
+	var text = contentInput.value,
+		qr = qrcodegenerator( 0, 'H' );
 
 	qr.addData( text );
 	qr.make();
