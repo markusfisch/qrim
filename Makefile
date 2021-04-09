@@ -1,5 +1,5 @@
 HOST = hhsw.de@ssh.strato.de:sites/qrim/
-OBJECTS = index.html css images lib
+OBJECTS = .htaccess index.html css images lib
 OPTIONS = \
 	--recursive \
 	--times \
