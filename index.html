@@ -188,7 +188,7 @@ function drawWhenComplete()
 	qrim.matrixAlpha = matrixAlphaRange.value/100;
 
 	var text = contentInput.value,
-		qr = qrcodegenerator( 0, 'H' );
+		qr = qrcodegenerator( text.length < 8 ? 2 : 0, 'H' );
 
 	qr.addData( text );
 	qr.make();
